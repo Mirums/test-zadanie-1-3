@@ -1,0 +1,113 @@
+
+body{
+    font-family: "tt-lakes", sans-serif;
+    margin: 0;
+}
+button{
+  all: unset;
+  cursor: pointer;
+  
+}
+.header{
+  border-bottom: 1px solid #D9FFF5;
+}
+.buttons{
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  align-items: stretch;
+  margin-top: 19px;
+  margin-bottom: 23px;
+}
+.buttons__group{
+height: 45px;
+}
+.buttons__group--left{
+  display: flex;
+  gap: 16px;
+  
+}
+.buttons__group--right{
+  display: flex;
+  gap: 16px;
+}
+.main{
+  padding-top: 24px;
+  background-color: #F8F8F8 ;
+}
+@font-face {
+  font-family: "tt-lakes";
+  src: url(fonts/TTLakes-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "tt-lakes";
+  src: url(fonts/TTLakes-Medium.woff);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.main__carousel{
+  display: flex;
+  list-style-type: none;
+  padding-left: 16px;
+  gap: 20px;
+  overflow-x: scroll;
+}
+    @media screen and (orientation: portrait){
+      .main__carousel{
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, black 90%, transparent 100%); 
+  }   
+    }
+.main__carousel-item{
+  font-size: 16px;
+  color: #7E7E82;
+  white-space: nowrap;
+  padding-top: 8px;
+}
+.main__carousel-item--selected{
+  border:2px solid #B8FFEC;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+ 
+  padding-bottom: 8px;
+  padding-left: 17px;
+  padding-right: 9px;
+}
+.main__selected-zone{
+  display: flex;
+  text-align: center;
+}
+.main__selected-zone-title{
+  margin: 0;
+  padding-left: 16px;
+}
+.main__information{
+  display: flex;
+  padding-bottom: 35px;
+  flex-wrap: wrap;
+}
+.main__information-group.main__information-group--left{
+  flex: 1;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+.main__information-picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.main__information-button{
+  display: flex;
+  gap: 8px;
+}
+.main__information-text{
+  font-weight: 450;
+}
+
