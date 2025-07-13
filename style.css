@@ -1,7 +1,13 @@
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body{
-    font-family: "tt-lakes", sans-serif;
-    margin: 0;
+  font-family: "tt-lakes", sans-serif;
+  margin: 0;
+  background-color: #F8F8F8;
 }
 button{
   all: unset;
@@ -10,6 +16,7 @@ button{
 }
 .header{
   border-bottom: 1px solid #D9FFF5;
+
 }
 .buttons{
   background-color: #FFFFFF;
@@ -18,9 +25,10 @@ button{
   padding-left: 16px;
   padding-right: 16px;
   align-items: stretch;
-  margin-top: 19px;
-  margin-bottom: 23px;
+  padding-top: 19px;
+  padding-bottom: 23px;
 }
+
 .buttons__group{
 height: 45px;
 }
@@ -33,9 +41,33 @@ height: 45px;
   display: flex;
   gap: 16px;
 }
+.buttons__button--circle-pink{
+  border-radius: 50%;
+  background-color: #FF3E79;
+  width: 40px;
+  height: 40px;
+}
+.buttons__button{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .buttons__button--tablet, .desktop-buttons{
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1119px) {
+   .desktop-buttons{
+    display: none;
+  }
+}
 .main{
   padding-top: 24px;
-  background-color: #F8F8F8 ;
+
 }
 @font-face {
   font-family: "tt-lakes";
@@ -58,7 +90,7 @@ height: 45px;
   gap: 20px;
   overflow-x: scroll;
 }
-    @media screen and (orientation: portrait){
+    @media (min-width: 320px) and (max-width: 950px){
       .main__carousel{
     -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, black 90%, transparent 100%); 
@@ -79,9 +111,12 @@ height: 45px;
   padding-left: 17px;
   padding-right: 9px;
 }
+
+
 .main__selected-zone{
   display: flex;
   text-align: center;
+  font-size: 14px;
 }
 .main__selected-zone-title{
   margin: 0;
@@ -92,16 +127,19 @@ height: 45px;
   padding-bottom: 35px;
   flex-wrap: wrap;
 }
+.main__information-group{
+  flex: 1 1 0;
+    min-width: 300px;
+}
 .main__information-group.main__information-group--left{
-  flex: 1;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 16px;
 }
 .main__information-picture {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 .main__information-button{
   display: flex;
@@ -110,4 +148,63 @@ height: 45px;
 .main__information-text{
   font-weight: 450;
 }
+@media (min-width: 1120px){
+  .main__carousel{
+    gap:0 10px;
+    padding-left: 32px;
+    overflow:visible;
+    flex-wrap: wrap;
+}
+  .main__carousel-item{
+    font-size: 16px;
+    color: #7E7E82;
+    white-space: nowrap;
+    padding-top: 8px;
 
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 9px;
+}
+  .header--phone{
+    display: none;
+}
+  .header--tablet{
+    display: none;
+}
+
+  .main__carousel-item--selected{
+    border:2px solid #B8FFEC;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+ 
+   padding-bottom: 8px;
+   padding-left: 23px;
+   padding-right: 22px;
+}
+  .desktop-buttons{
+    margin-left: auto;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-end;
+    padding-right: 30px;
+    font-size: 16px;
+  }
+  .desktop-buttons__item{
+    display: flex;
+    font-weight: 500;
+  }
+  .desktop-buttons__text{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 8px;
+  }
+  .desktop-buttons__button--circle-pink{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #FF3E79;
+  width: 40px;
+  height: 40px;
+}
+}
